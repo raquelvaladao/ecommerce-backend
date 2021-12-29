@@ -1,0 +1,823 @@
+{
+	"info": {
+		"_postman_id": "db5d2348-a1c1-4042-8181-b3cbf4dcba9b",
+		"name": "APIS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin API",
+			"item": [
+				{
+					"name": "Usuário",
+					"item": [
+						{
+							"name": "Cadastrar usuário",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\": \"Admin\",\r\n    \"login\": \"admin\",\r\n    \"senha\": \"Gft2021\",\r\n    \"perfilId\": \"2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/usuario",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"usuario"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Autenticar",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"login\": \"admin\",\r\n    \"senha\": \"Gft2021\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/auth",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"auth"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Politicos",
+					"item": [
+						{
+							"name": "Criar político",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwNzI4OTAzfQ.U9h-oyLzpipyl6x71I5owHcr0wefGTlhkek9qbdZP1k",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "nome",
+											"value": "Daniela Emilly Neves",
+											"contentType": "",
+											"type": "text"
+										},
+										{
+											"key": "cpf",
+											"value": "836.727.365-62",
+											"contentType": "",
+											"type": "text"
+										},
+										{
+											"key": "telefone",
+											"value": "(86) 98972-3306",
+											"contentType": "",
+											"type": "text"
+										},
+										{
+											"key": "enderecoDTO.logradouro",
+											"value": "Rua do Triângulo",
+											"contentType": "",
+											"type": "text"
+										},
+										{
+											"key": "enderecoDTO.complemento",
+											"value": "Não",
+											"contentType": "",
+											"type": "text"
+										},
+										{
+											"key": "enderecoDTO.numero",
+											"value": "91",
+											"contentType": "",
+											"type": "text"
+										},
+										{
+											"key": "projetos",
+											"value": "93",
+											"contentType": "",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/rldj/My Private Documents/starters-photos-backup-final/12/perfilH2.jpg"
+										},
+										{
+											"key": "lider",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "processos",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "partidoId",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "cargoDTO.nome",
+											"value": "MINISTRO",
+											"type": "text"
+										},
+										{
+											"key": "enderecoDTO.cep",
+											"value": "64028-285",
+											"type": "text"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/politicos",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"politicos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar todos",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwODQxMTM4fQ.7_jKHuPfqJ_t9KLovXks7QqdJvr_Ew4Yv_Vmtf87dX0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/politicos",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"politicos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deletar politico",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwNzI4OTAzfQ.U9h-oyLzpipyl6x71I5owHcr0wefGTlhkek9qbdZP1k",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/politicos/8",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"politicos",
+										"8"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Editar político",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwNjgyNzM3fQ.udXiPaaWmuDlnxqUFdq1XJJMhPy9EbCVV53gHDuAHAc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "nome",
+											"value": "Mike Sanders",
+											"type": "text"
+										},
+										{
+											"key": "telefone",
+											"value": "(48) 93389-7050",
+											"type": "text"
+										},
+										{
+											"key": "enderecoDTO.logradouro",
+											"value": "Mitchell Grove Suite",
+											"type": "text"
+										},
+										{
+											"key": "enderecoDTO.complemento",
+											"value": "Mount Vernon, WY",
+											"type": "text"
+										},
+										{
+											"key": "enderecoDTO.numero",
+											"value": "6405",
+											"type": "text"
+										},
+										{
+											"key": "projetos",
+											"value": "32",
+											"type": "text"
+										},
+										{
+											"key": "lider",
+											"value": "true",
+											"type": "text"
+										},
+										{
+											"key": "processos",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "partidoId",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "cargoDTO.nome",
+											"value": "prefeito",
+											"type": "text"
+										},
+										{
+											"key": "enderecoDTO.cep",
+											"value": "28232",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/politicos/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"politicos",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Cargos",
+					"item": [
+						{
+							"name": "Cargos ASC",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwODQxMTM4fQ.7_jKHuPfqJ_t9KLovXks7QqdJvr_Ew4Yv_Vmtf87dX0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/senador/asc",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"senador",
+										"asc"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cargos DESC",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwODQxMTM4fQ.7_jKHuPfqJ_t9KLovXks7QqdJvr_Ew4Yv_Vmtf87dX0",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/senador/desc",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"senador",
+										"desc"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cargos leis",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwNjg4NjkwfQ.GMnAjqDjdoI3TzOWWQdHdPJuBvhjwnpv-6NOL9efLJo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/senador/leis?qtd=32",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"senador",
+										"leis"
+									],
+									"query": [
+										{
+											"key": "qtd",
+											"value": "32"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cargos buscar por id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwNjg4NjkwfQ.GMnAjqDjdoI3TzOWWQdHdPJuBvhjwnpv-6NOL9efLJo",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/senador?id=1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"senador"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Partidos",
+					"item": [
+						{
+							"name": "Criar partido",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwNzI5Mjk5fQ.SV46ZVmDyBNzSIVIZSfYPxWcveGxp4x4JUxFd7OIMYs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\": \"Partido Socialismo e Liberdade\",\r\n    \"sigla\": \"PCdoB\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/partidos",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"partidos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Deletar partido",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwNzI5Mjk5fQ.SV46ZVmDyBNzSIVIZSfYPxWcveGxp4x4JUxFd7OIMYs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/partidos/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"partidos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar partidos",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwNzI5Mjk5fQ.SV46ZVmDyBNzSIVIZSfYPxWcveGxp4x4JUxFd7OIMYs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/api/partidos/todos",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"partidos",
+										"todos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Editar partido",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwNzI5Mjk5fQ.SV46ZVmDyBNzSIVIZSfYPxWcveGxp4x4JUxFd7OIMYs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\": \"Partido Trabalhista\",\r\n    \"sigla\": \"PT\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/partidos/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"partidos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Consumo API",
+			"item": [
+				{
+					"name": "Autenticar na API",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login\": \"usuario\",\r\n    \"senha\": \"Gft2021\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/consumo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"consumo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Todos os politicos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwODQzNTEwfQ.QdcnIahOzlr6s7pOqlM7h35N5r8Iad2aQOg-6yAfWDk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/consumo/politicos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"consumo",
+								"politicos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cargos ASC",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwODQwOTY3fQ.ErgO2Eu6MxzcPcyW2KBpPj5Qr0CzzNafSeMZWwOcFz4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/consumo/politicos/senador/asc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"consumo",
+								"politicos",
+								"senador",
+								"asc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cargos DESC",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwODQwOTY3fQ.ErgO2Eu6MxzcPcyW2KBpPj5Qr0CzzNafSeMZWwOcFz4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/consumo/politicos/senador/desc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"consumo",
+								"politicos",
+								"senador",
+								"desc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cargos leis",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwNzI4MzEwfQ.vFxfj2p73vX1eXrMZXcyvEVfUu_dwz42zdSPo7xooHc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/consumo/politicos/senador/leis?qtd=46",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"consumo",
+								"politicos",
+								"senador",
+								"leis"
+							],
+							"query": [
+								{
+									"key": "qtd",
+									"value": "46"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar por cargos por id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwNzI4MzEwfQ.vFxfj2p73vX1eXrMZXcyvEVfUu_dwz42zdSPo7xooHc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/consumo/politicos/buscar/presidente?id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"consumo",
+								"politicos",
+								"buscar",
+								"presidente"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

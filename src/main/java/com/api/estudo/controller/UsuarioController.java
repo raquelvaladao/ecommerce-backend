@@ -21,6 +21,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @Api(tags = "Usuário")
@@ -42,6 +43,7 @@ public class UsuarioController {
 
         try{
             Usuario toSave = usuarioService.salvarUsuario(mapper.fromDTO(dto));
+            verSeLoginUnico(toSave.getLogin());
             ResponseUsuarioDTO response = mapper.fromEntity(toSave);
             return ResponseEntity.ok(response);
         } catch (Exception e){
@@ -77,4 +79,11 @@ public class UsuarioController {
         }
     }
 
+    private void verSeLoginUnico(String login){
+        usuarioService.listar().forEach(usuario -> {
+            if(usuario.getLogin().equals(login)){
+                throw new InputInvalidoException("Esse login já está sendo usado.");
+            }
+        });
+    }
 }

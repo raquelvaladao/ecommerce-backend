@@ -163,12 +163,7 @@
 											"value": "64028-285",
 											"type": "text"
 										}
-									],
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
+									]
 								},
 								"url": {
 									"raw": "localhost:8080/api/politicos",
@@ -347,7 +342,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwODQxMTM4fQ.7_jKHuPfqJ_t9KLovXks7QqdJvr_Ew4Yv_Vmtf87dX0",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwODc4MzIwfQ.tLAXnOnY1etAASChC4Z1E4WbrS12x2LhVaNSesPorF4",
 											"type": "string"
 										}
 									]
@@ -377,7 +372,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwODQxMTM4fQ.7_jKHuPfqJ_t9KLovXks7QqdJvr_Ew4Yv_Vmtf87dX0",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwODc4MzIwfQ.tLAXnOnY1etAASChC4Z1E4WbrS12x2LhVaNSesPorF4",
 											"type": "string"
 										}
 									]
@@ -407,7 +402,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwNjg4NjkwfQ.GMnAjqDjdoI3TzOWWQdHdPJuBvhjwnpv-6NOL9efLJo",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwODgwMDk3fQ.ont3pWx9iP_rRpYlqie00VpDhqwlfo7l1zIolVHErYY",
 											"type": "string"
 										}
 									]
@@ -415,7 +410,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "localhost:8080/api/senador/leis?qtd=32",
+									"raw": "localhost:8080/api/senador/leis?qtd=46",
 									"host": [
 										"localhost"
 									],
@@ -428,7 +423,7 @@
 									"query": [
 										{
 											"key": "qtd",
-											"value": "32"
+											"value": "46"
 										}
 									]
 								}
@@ -443,7 +438,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwNjg4NjkwfQ.GMnAjqDjdoI3TzOWWQdHdPJuBvhjwnpv-6NOL9efLJo",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwODc4MzIwfQ.tLAXnOnY1etAASChC4Z1E4WbrS12x2LhVaNSesPorF4",
 											"type": "string"
 										}
 									]
@@ -551,7 +546,7 @@
 									"bearer": [
 										{
 											"key": "token",
-											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwNzI5Mjk5fQ.SV46ZVmDyBNzSIVIZSfYPxWcveGxp4x4JUxFd7OIMYs",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwODg1OTAxfQ.DpnP3DBMAJFwLe-0RE8O9BFndwFk8EzsSIV225pkoic",
 											"type": "string"
 										}
 									]
@@ -655,7 +650,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwODQzNTEwfQ.QdcnIahOzlr6s7pOqlM7h35N5r8Iad2aQOg-6yAfWDk",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwODg1OTAxfQ.DpnP3DBMAJFwLe-0RE8O9BFndwFk8EzsSIV225pkoic",
 									"type": "string"
 								}
 							]
@@ -663,7 +658,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:9090/consumo/politicos",
+							"raw": "http://localhost:9090/consumo/politicos?page=1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -672,6 +667,12 @@
 							"path": [
 								"consumo",
 								"politicos"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
 							]
 						}
 					},
@@ -717,7 +718,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwODQwOTY3fQ.ErgO2Eu6MxzcPcyW2KBpPj5Qr0CzzNafSeMZWwOcFz4",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwODg1OTkxfQ.BLYaMt40hWu-5meT6UUXXwjoX-_BthVsEf1NGLbX6a0",
 									"type": "string"
 								}
 							]
@@ -749,7 +750,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwNzI4MzEwfQ.vFxfj2p73vX1eXrMZXcyvEVfUu_dwz42zdSPo7xooHc",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwODgwNDcwfQ.zlr0Gt_hkOR23uuFGWOC52mBvkMYWRms4qboEYui4GY",
 									"type": "string"
 								}
 							]
@@ -787,7 +788,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwNzI4MzEwfQ.vFxfj2p73vX1eXrMZXcyvEVfUu_dwz42zdSPo7xooHc",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiaXNzIjoiUHJvZ3JhbWFTdGFydGVyIiwiZXhwIjoxNjQwODQwOTY3fQ.ErgO2Eu6MxzcPcyW2KBpPj5Qr0CzzNafSeMZWwOcFz4",
 									"type": "string"
 								}
 							]

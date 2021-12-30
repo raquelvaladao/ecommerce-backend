@@ -3,6 +3,7 @@
 
 ###  POSTMAN - ARQUIVO JSON PARA TESTES !!
   + [Está na raíz deste repositório (clique aqui)](APIS.postman_collection.json)
+  + Esse arquivo está nos dois repositórios
 
 ###  Docs - swagger2
   + API Admin: https://localhost:8080/swagger-ui.html

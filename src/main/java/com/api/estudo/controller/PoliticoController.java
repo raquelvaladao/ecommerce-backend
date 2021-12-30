@@ -92,6 +92,7 @@ public class PoliticoController {
     public ResponseEntity<ResponsePoliticoDTO> editarPolitico(@PathVariable(name = "id") Long id,
                                                               @Valid RequestPutPoliticoDTO dto) {
         Politico update = mapper.toUpdatedEntity(dto);
+        verSeLiderValido(update);
         ResponsePoliticoDTO politico = mapper.fromEntity(politicoService.atualizarPolitico(id, update));
 
         return ResponseEntity.ok(politico);

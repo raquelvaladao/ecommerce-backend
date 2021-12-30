@@ -46,7 +46,7 @@ public class ValidationHandlerController extends ResponseEntityExceptionHandler 
     @Override
     protected ResponseEntity<Object> handleMissingServletRequestPart(MissingServletRequestPartException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
         ApiErrorDTO errorsDTO = new ApiErrorDTO(
-                "Esse arquivo/parâmetro está faltando",
+                "Esse arquivo/parâmetro de foto está vazio. Escolha uma foto",
                 "Esse input é inválido.",
                 HttpStatus.BAD_REQUEST);
 

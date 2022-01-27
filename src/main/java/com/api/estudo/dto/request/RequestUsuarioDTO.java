@@ -27,7 +27,8 @@ public class RequestUsuarioDTO {
     @Size(min = 6, max = 40)
     private String senha;
 
-    @NotNull(message = "Usuário deve ter um perfil.")
-    private Long perfilId;
+    @NotEmpty
+    private String cpf;
+
 
 }

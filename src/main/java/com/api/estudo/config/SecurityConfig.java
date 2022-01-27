@@ -17,6 +17,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
 @EnableWebSecurity
 @Configuration
@@ -57,6 +58,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .antMatchers(HttpMethod.POST,"/api/auth/**").permitAll()
+
+                .antMatchers("/politicos-photos/**", "/produtos-photos/**").permitAll()
+
                 .antMatchers(HttpMethod.POST,"/api/usuario/**").permitAll()
                 .antMatchers(HttpMethod.PUT).hasAuthority("ADMIN")
                 .antMatchers(HttpMethod.DELETE).hasAuthority("ADMIN")
@@ -65,6 +69,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(SWAGGER_WHITELIST).permitAll()
                 .anyRequest().authenticated()
                 .and()
+                .cors().and()
                 .csrf().disable()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)

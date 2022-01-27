@@ -21,7 +21,7 @@ public abstract class UsuMapper {
 
     public abstract ResponseUsuarioDTO fromEntity(Usuario entity);
 
-    @Mapping(target = "perfil", expression = "java(perfilRepository.findById(dto.getPerfilId()).get())")
+    @Mapping(target = "perfil", expression = "java(perfilRepository.findById(1L).get())")
     public abstract Usuario fromDTO(RequestUsuarioDTO dto);
 
     @Mapping(target = "perfil", expression = "java(entity.getPerfil().getNome())")

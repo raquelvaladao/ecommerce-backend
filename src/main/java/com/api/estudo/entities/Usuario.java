@@ -29,6 +29,9 @@ public class Usuario implements UserDetails {
     private String nome;
 
     @NotNull
+    private String cpf;
+
+    @NotNull
     private String login;
 
     @JsonIgnore

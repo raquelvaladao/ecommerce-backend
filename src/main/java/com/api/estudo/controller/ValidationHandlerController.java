@@ -1,8 +1,6 @@
 package com.api.estudo.controller;
 
-import com.api.estudo.dto.ApiErrorDTO;
-import com.api.estudo.entities.Politico;
-import com.api.estudo.exceptions.InputInvalidoException;
+import com.api.estudo.dto.response.ApiErrorDTO;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

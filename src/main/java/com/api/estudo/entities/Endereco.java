@@ -1,21 +1,19 @@
 package com.api.estudo.entities;
 
-
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Embeddable;
 
-@Embeddable
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Embeddable
+@ToString
 public class Endereco {
-    private String logradouro;
-    private String complemento;
-    private String numero;
+    private String rua;
+    private String estado;
     private String cep;
+    private String cidade;
+    private String bairro;
 }

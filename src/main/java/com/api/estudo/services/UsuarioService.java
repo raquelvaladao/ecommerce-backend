@@ -55,7 +55,7 @@ public class UsuarioService implements UserDetailsService {
 
         usuario.setSenha(encoder.encode(usuario.getSenha()));
         verSeLoginEstaUsado(usuario);
-        return usuarioRepository.save(usuario);
+        return usuarioRepository.saveAndFlush(usuario);
     }
 
     private void verSeLoginEstaUsado(Usuario usuario) {

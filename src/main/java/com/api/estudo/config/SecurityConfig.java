@@ -58,14 +58,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .antMatchers(HttpMethod.POST,"/api/auth/**").permitAll()
-
-                .antMatchers("/politicos-photos/**", "/produtos-photos/**").permitAll()
-
+                .antMatchers("/produtos-photos/**").permitAll()
                 .antMatchers(HttpMethod.POST,"/api/usuario/**").permitAll()
-                .antMatchers(HttpMethod.PUT).hasAuthority("ADMIN")
-                .antMatchers(HttpMethod.DELETE).hasAuthority("ADMIN")
-                .antMatchers("/api/partidos/**").hasAuthority("ADMIN")
-                .antMatchers(HttpMethod.POST, "/api/politicos/**").hasAuthority("ADMIN")
                 .antMatchers(SWAGGER_WHITELIST).permitAll()
                 .anyRequest().authenticated()
                 .and()

@@ -37,8 +37,8 @@ public class SpringFoxConfig  implements WebMvcConfigurer {
     private ApiInfo metaInfo() {
 
         return new ApiInfoBuilder()
-                .title("API do Admin de políticos- API REST")
-                .description("API REST do admin pra gerenciar políticos e seus cargos")
+                .title("API do Admin de produtos- API REST")
+                .description("API REST")
                 .version("1.1.0")
                 .license("Apache 2.0")
                 .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0\"")

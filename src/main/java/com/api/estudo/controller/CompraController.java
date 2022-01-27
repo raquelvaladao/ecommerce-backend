@@ -17,6 +17,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,7 +46,9 @@ public class CompraController {
             if (compra == null) {
                 compra = Compra.builder()
                         .itensCompra(List.of(item))
-                        .comprador(usuario).build();
+                        .comprador(usuario)
+                        .valorTotal(BigDecimal.ZERO)
+                        .build();
             } else {
                 if(compraService.isProdutoNaCompra(compra, dto.getProdutoId())) {
                     item = compraService.alterarQuantidadeItem(compra, dto);
@@ -54,6 +57,7 @@ public class CompraController {
                 }
                 itemCompraService.salvarItem(item);
                 compraService.adicionarItem(compra, item);
+
             }
             compraService.salvarCompra(compra);
             return compraMapper.fromEntity(compra);

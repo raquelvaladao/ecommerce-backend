@@ -36,7 +36,7 @@ public class CompraController {
     private final ItemCompraService itemCompraService;
 
     @PostMapping
-    @ApiOperation(value = "Salvar compra", nickname = "salvarCompra", response = Compra.class)
+    @ApiOperation(value = "Adicionar ao carrinho", nickname = "adicionarAoCarrinho", response = Compra.class)
     public ResponseCompraDTO adicionarAoCarrinho(@RequestBody RequestItemCompraDTO dto) {
         ItemCompra item = mapper.fromDTO(dto);
         Usuario usuario = (Usuario) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
@@ -101,7 +101,7 @@ public class CompraController {
                 itemCompraService.removerItemDoBanco(item);
                 return ResponseEntity.ok(compraMapper.fromEntity(compra));
             }
-        Compra response = compraService.salvarCompra(compra);
+            compraService.salvarCompra(compra);
             return ResponseEntity.ok(compraMapper.fromEntity(compra));
         } catch (Exception e) {
             e.printStackTrace();

@@ -57,11 +57,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers(HttpMethod.POST,"/api/auth/**").permitAll()
+              /*  .antMatchers(HttpMethod.POST,"/api/auth/**").permitAll()
                 .antMatchers("/produtos-photos/**").permitAll()
                 .antMatchers(HttpMethod.POST,"/api/usuario/**").permitAll()
                 .antMatchers(SWAGGER_WHITELIST).permitAll()
-                .anyRequest().authenticated()
+                .anyRequest().authenticated()*/
+                .anyRequest().permitAll()
                 .and()
                 .cors().and()
                 .csrf().disable()

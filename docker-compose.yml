@@ -1,0 +1,28 @@
+services:
+  banco:
+    image: mysql
+    # adminer's database server name
+    container_name: dbserver
+    restart: always
+    environment:
+      MYSQL_DATABASE: "database"
+      MYSQL_ROOT_PASSWORD: 'root'
+    ports:
+      - '3306:3306'
+    volumes:
+      - /data/mysql
+    networks:
+      - mysql-compose-network
+
+  adminer:
+    image: adminer
+    ports:
+      - 8081:8080
+    networks:
+      - mysql-compose-network
+
+networks:
+  mysql-compose-network:
+    driver: bridge
+#volumes:
+#  my-db:
